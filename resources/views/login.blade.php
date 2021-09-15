@@ -10,7 +10,7 @@
 <body>
 <div style="text-align: center">
     <h1>Login Page</h1>
-    <form action="" method="post">
+    <form action="{{route('adminLogin')}}" method="post">
         @csrf
         Kullanıcı adı : <input type="text" name="username">
         <br><br>
@@ -18,6 +18,11 @@
         <br><br>
         <input type="submit" value="Giriş Yap">
     </form>
+    "
+    @if(isset($durum))
+        {{$mesaj}}
+        @endif
+    "
 </div>
 </body>
 </html>
